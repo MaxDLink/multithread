@@ -1,0 +1,7 @@
+digraph G {
+
+  compilejob -> parsingjob; 
+  parsingjob -> loopstatement; 
+  loopstatement -> outputjob;
+  
+}

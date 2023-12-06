@@ -1,0 +1,26 @@
+{
+    "outputLines": [
+        "clang++ -g -std=c++14 ./test-code/*.cpp -o test-output",
+        "./test-code/test-set-one.cpp:6:4: error: expected expression",
+        "   << \"test_set_one\" << std::endl",
+        "   ^",
+        "1 error generated.",
+        "./test-code/test-set-three.cpp:1:2: error: invalid preprocessing directive",
+        "#incl",
+        " ^",
+        "./test-code/test-set-three.cpp:4:5: error: use of undeclared identifier 'std'",
+        "    std::cout << \"test_set_three\" << std::endl;",
+        "    ^",
+        "./test-code/test-set-three.cpp:4:38: error: use of undeclared identifier 'std'",
+        "    std::cout << \"test_set_three\" << std::endl;",
+        "                                     ^",
+        "3 errors generated.",
+        "./test-code/test-set-two.cpp:7:1: error: expected '}'",
+        "^",
+        "./test-code/test-set-two.cpp:4:20: note: to match this '{'",
+        "void test_set_two(){",
+        "                   ^",
+        "1 error generated.",
+        "make[1]: *** [automated] Error 1"
+    ]
+}

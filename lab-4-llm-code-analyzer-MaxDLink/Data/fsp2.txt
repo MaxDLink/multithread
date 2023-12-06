@@ -1,0 +1,8 @@
+digraph JobGraph {
+  
+  compilejob -> controlstatement;
+  controlstatement -> countingjob[label = "True"]; 
+  controlstatement -> parsingjob[label = "False"]; 
+  parsingjob -> outputjob[label = "outputjob depends on parsingjob"]; 
+  
+}

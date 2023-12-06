@@ -1,0 +1,44 @@
+[
+    {
+        "Column Number": 4,
+        "Error Description": "expected expression   << \"test_set_one\" << std::endl   ^1 error generated.",
+        "Error Type": "error",
+        "File Path": "test-code/test-set-one.cpp",
+        "Line Number": 6
+    },
+    {
+        "Column Number": 2,
+        "Error Description": "invalid preprocessing directive#incl ^",
+        "Error Type": "error",
+        "File Path": "test-code/test-set-three.cpp",
+        "Line Number": 1
+    },
+    {
+        "Column Number": 5,
+        "Error Description": "use of undeclared identifier 'std'    std::cout << \"test_set_three\" << std::endl;    ^",
+        "Error Type": "error",
+        "File Path": "test-code/test-set-three.cpp",
+        "Line Number": 4
+    },
+    {
+        "Column Number": 38,
+        "Error Description": "use of undeclared identifier 'std'    std::cout << \"test_set_three\" << std::endl;                                     ^3 errors generated.",
+        "Error Type": "error",
+        "File Path": "test-code/test-set-three.cpp",
+        "Line Number": 4
+    },
+    {
+        "Column Number": 1,
+        "Error Description": "expected '}'^",
+        "Error Type": "error",
+        "File Path": "test-code/test-set-two.cpp",
+        "Line Number": 7
+    },
+    {
+        "Column Number": 20,
+        "Error Description": "to match this '{'void test_set_two(){                   ^1 error generated.make[1]: *** [automated] Error 1",
+        "Error Type": "note",
+        "File Path": "test-code/test-set-two.cpp",
+        "Line Number": 4
+    }
+]

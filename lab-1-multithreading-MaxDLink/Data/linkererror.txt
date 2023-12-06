@@ -1,0 +1,68 @@
+multiple main linker error: 
+
+clang++ -g -std=c++14 ./Code/*.cpp -o output
+./output
+Creating Job System
+Creating Worker Threads
+Creating Jobs
+Queuing CJB
+Job 0 has been executed.
+Job 1 has been executed.
+Job 2 has been executed.
+total jobs completed 3
+maxlink@Maxs-MacBook-Air lab-1-multithreading-MaxDLink % make automated 
+clang++ -g -std=c++14 ./test-code/*.cpp -o test-output
+duplicate symbol '_main' in:
+    /private/var/folders/ry/gb_0v1b949g4kykfktk0dfc40000gn/T/test-set-two-aadbaf.o
+    /private/var/folders/ry/gb_0v1b949g4kykfktk0dfc40000gn/T/test-set-one-ef824b.o
+    /private/var/folders/ry/gb_0v1b949g4kykfktk0dfc40000gn/T/test-set-three-324a23.o
+ld: 1 duplicate symbols
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [automated] Error 1
+
+Linker error for forward declaration: 
+
+clang++ -g -std=c++14 ./test-code/*.cpp -o test-output
+ld: Undefined symbols:
+  _main, referenced from:
+      <initial-undefines>
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [automated] Error 1
+
+clang++ -g -std=c++14 ./test-code/*.cpp -o test-output
+ld: Undefined symbols:
+  another_function(), referenced from:
+      test_set_one() in test-set-one-d436b7.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [automated] Error 1
+
+
+
+
+
+
+DEALING WITH THESE ERRORS: 
+
+1. clang++ -g -std=c++14 ./test-code/*.cpp -o test-output
+ld: Undefined symbols:
+  test_set_one(), referenced from:
+      _main in main-8601a8.o
+  test_set_three(), referenced from:
+      _main in main-8601a8.o
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [automated] Error 1 
+
+sol: This error message indicates that the linker is unable to find the definitions for the functions test_set_one() and test_set_three() that are referenced in your main function (in the file likely named main.cpp based on the object file name main-8601a8.o).
+
+2. clang++ -g -std=c++14 ./test-code/*.cpp -o test-output
+duplicate symbol '_main' in:
+    /private/var/folders/ry/gb_0v1b949g4kykfktk0dfc40000gn/T/main-f7cf43.o
+    /private/var/folders/ry/gb_0v1b949g4kykfktk0dfc40000gn/T/test-set-one-298774.o
+    /private/var/folders/ry/gb_0v1b949g4kykfktk0dfc40000gn/T/test-set-three-2ba47b.o
+ld: 1 duplicate symbols
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [automated] Error 1
+
+sol: main delared twice bad? 
+
+3. 

@@ -1,0 +1,80 @@
+[
+    [
+        {
+            "Column Number": 4,
+            "Error Description": "expected expression   << \"test_set_one\" << std::endl   ^1 error generated.",
+            "File Path": "test-code/test-set-one.cpp",
+            "Line Number": 6,
+            "Source Code Causing Error": [
+                "",
+                "int main(){",
+                "   << \"test_set_one\" << std::endl",
+                "    //another_function();",
+                ""
+            ]
+        }
+    ],
+    [
+        {
+            "Column Number": 2,
+            "Error Description": "invalid preprocessing directive#incl ^",
+            "File Path": "test-code/test-set-three.cpp",
+            "Line Number": 1,
+            "Source Code Causing Error": [
+                "#incl",
+                "#include \"test-set-three.h\"",
+                "void test_set_three() {"
+            ]
+        },
+        {
+            "Column Number": 5,
+            "Error Description": "use of undeclared identifier 'std'    std::cout << \"test_set_three\" << std::endl;    ^",
+            "File Path": "test-code/test-set-three.cpp",
+            "Line Number": 4,
+            "Source Code Causing Error": [
+                "#include \"test-set-three.h\"",
+                "void test_set_three() {",
+                "    std::cout << \"test_set_three\" << std::endl;",
+                "}"
+            ]
+        },
+        {
+            "Column Number": 38,
+            "Error Description": "use of undeclared identifier 'std'    std::cout << \"test_set_three\" << std::endl;                                     ^3 errors generated.",
+            "File Path": "test-code/test-set-three.cpp",
+            "Line Number": 4,
+            "Source Code Causing Error": [
+                "#include \"test-set-three.h\"",
+                "void test_set_three() {",
+                "    std::cout << \"test_set_three\" << std::endl;",
+                "}"
+            ]
+        }
+    ],
+    [
+        {
+            "Column Number": 1,
+            "Error Description": "expected '}'^",
+            "File Path": "test-code/test-set-two.cpp",
+            "Line Number": 7,
+            "Source Code Causing Error": [
+                "",
+                "   std::cout << \"test_set_two\" << std::endl; ",
+                ""
+            ]
+        },
+        {
+            "Column Number": 20,
+            "Error Description": "to match this '{'void test_set_two(){                   ^1 error generated.make[1]: *** [automated] Error 1",
+            "File Path": "test-code/test-set-two.cpp",
+            "Line Number": 4,
+            "Source Code Causing Error": [
+                "#include <iostream>  ",
+                "",
+                "void test_set_two(){",
+                "",
+                "   std::cout << \"test_set_two\" << std::endl; "
+            ]
+        }
+    ]
+]

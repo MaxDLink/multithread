@@ -1,0 +1,10 @@
+{
+    "outputLines": [
+        "clang++ -g -std=c++14 -I/usr/local/include/antlr4-runtime ./test-code/*.cpp -o test-output -L/usr/local/lib -lantlr4-runtime",
+        "./test-output",
+        "dyld[90544]: Library not loaded: libantlr4-runtime.4.13.1.dylib",
+        "  Referenced from: <442EB3A2-F7ED-3F51-8330-B078C22772C7> /Users/maxlink/Desktop/CS5393/final-autonomous-code-assistant-agent-MaxDLink/test-output",
+        "  Reason: tried: 'libantlr4-runtime.4.13.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OSlibantlr4-runtime.4.13.1.dylib' (no such file), 'libantlr4-runtime.4.13.1.dylib' (no such file), '/Users/maxlink/Desktop/CS5393/final-autonomous-code-assistant-agent-MaxDLink/libantlr4-runtime.4.13.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/maxlink/Desktop/CS5393/final-autonomous-code-assistant-agent-MaxDLink/libantlr4-runtime.4.13.1.dylib' (no such file), '/Users/maxlink/Desktop/CS5393/final-autonomous-code-assistant-agent-MaxDLink/libantlr4-runtime.4.13.1.dylib' (no such file)",
+        "make[1]: *** [automated] Abort trap: 6"
+    ]
+}

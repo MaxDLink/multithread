@@ -1,0 +1,26 @@
+{
+    "flowscriptLines": [
+        "digraph G {",
+        "",
+        "  subgraph cluster_0 {",
+        "    style=filled;",
+        "    color=lightgrey;",
+        "    node [style=filled,color=white];",
+        "    label = \"Basic Job Flow\";",
+        "  }",
+        "",
+        "  a1[label=\"A ",
+        "  ID",
+        "  Type\"];",
+        "  a2[label=\"B ",
+        "  ID",
+        "  Type\"]",
+        "  a3[label=\"C ",
+        "  ID ",
+        "  Type\"];",
+        "",
+        "  a1->a2[label=\"Dependencies\"]",
+        "  a2->a3",
+        "}"
+    ]
+}

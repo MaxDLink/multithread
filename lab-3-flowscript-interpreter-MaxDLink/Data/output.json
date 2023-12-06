@@ -1,0 +1,80 @@
+[
+    [
+        {
+            "Column Number": 4,
+            "Error Description": "expected expression",
+            "File Path": "test-code/test-set-one.cpp",
+            "Line Number": 6,
+            "Source Code Causing Error": [
+                "",
+                "int main(){",
+                "   << \"test_set_one\" << std::endl",
+                "    //another_function();",
+                ""
+            ]
+        }
+    ],
+    [
+        {
+            "Column Number": 2,
+            "Error Description": "invalid preprocessing directive",
+            "File Path": "test-code/test-set-three.cpp",
+            "Line Number": 1,
+            "Source Code Causing Error": [
+                "#incl",
+                "#include \"test-set-three.h\"",
+                "void test_set_three() {"
+            ]
+        },
+        {
+            "Column Number": 5,
+            "Error Description": "use of undeclared identifier 'std'",
+            "File Path": "test-code/test-set-three.cpp",
+            "Line Number": 4,
+            "Source Code Causing Error": [
+                "#include \"test-set-three.h\"",
+                "void test_set_three() {",
+                "    std::cout << \"test_set_three\" << std::endl;",
+                "}"
+            ]
+        },
+        {
+            "Column Number": 38,
+            "Error Description": "use of undeclared identifier 'std'",
+            "File Path": "test-code/test-set-three.cpp",
+            "Line Number": 4,
+            "Source Code Causing Error": [
+                "#include \"test-set-three.h\"",
+                "void test_set_three() {",
+                "    std::cout << \"test_set_three\" << std::endl;",
+                "}"
+            ]
+        }
+    ],
+    [
+        {
+            "Column Number": 1,
+            "Error Description": "expected '}'",
+            "File Path": "test-code/test-set-two.cpp",
+            "Line Number": 7,
+            "Source Code Causing Error": [
+                "",
+                "   std::cout << \"test_set_two\" << std::endl; ",
+                ""
+            ]
+        },
+        {
+            "Column Number": 20,
+            "Error Description": "to match this '{'",
+            "File Path": "test-code/test-set-two.cpp",
+            "Line Number": 4,
+            "Source Code Causing Error": [
+                "#include <iostream>  ",
+                "",
+                "void test_set_two(){",
+                "",
+                "   std::cout << \"test_set_two\" << std::endl; "
+            ]
+        }
+    ]
+]

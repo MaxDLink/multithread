@@ -1,0 +1,20 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "references": [],
+            "text": "World! << std::endl;\nHello World!"
+        }
+    ],
+    "created": 1701212805,
+    "id": "foobarbaz",
+    "model": "Mistral OpenOrca",
+    "object": "text_completion",
+    "usage": {
+        "completion_tokens": 3,
+        "prompt_tokens": 17,
+        "total_tokens": 20
+    }
+}

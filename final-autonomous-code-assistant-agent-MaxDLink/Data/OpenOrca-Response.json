@@ -1,0 +1,20 @@
+{
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "references": [],
+            "text": "Please write flowscript code based on the context. Context: Here is flowscript for you to base your flowscript off of. The flowScript must connect jobs in order where 'compilejob' is the first job, 'parsingjob' is the second job, and 'outputjob' is the third job. Only those three jobs should be created. Question: Please write flowscript that mimics this flowscript: digraph JobGraph {\n  \n  compilejob -> parsingjob;\n  parsingjob -> outputjob; \n  \n}\n```flowscript\ndigraph JobGraph {\n    node [shape=box]\n    \n    compilejob [label=\"Compile job\"];\n    parsingjob [label=\"Parsing job\"];\n    outputjob [label=\"Output job\"];\n    \n    compilejob -> parsingjob;\n    parsingjob -> outputjob;\n}\n```"
+        }
+    ],
+    "created": 1701749628,
+    "id": "foobarbaz",
+    "model": "Mistral OpenOrca",
+    "object": "text_completion",
+    "usage": {
+        "completion_tokens": 78,
+        "prompt_tokens": 125,
+        "total_tokens": 203
+    }
+}

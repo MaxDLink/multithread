@@ -1,0 +1,38 @@
+[
+    {
+        "Column Number": "4",
+        "Error Description": "Example error description",
+        "Error Type": "error",
+        "File Path": "./test-code/test-set-one.cpp",
+        "Line Number": "6",
+        "Source Code": [
+            "int main(){",
+            "   << \"test_set_one\" << std::endl",
+            "    //another_function();",
+            "",
+            ""
+        ]
+    },
+    {
+        "Column Number": "4",
+        "Error Description": "Example error description",
+        "Error Type": "error",
+        "File Path": "./test-code/test-set-two.cpp",
+        "Line Number": "6",
+        "Source Code": [
+            "",
+            "   std::cout << \"test_set_two\" << std::endl; ",
+            ""
+        ]
+    },
+    {
+        "Column Number": "4",
+        "Error Description": "Example error description",
+        "Error Type": "error",
+        "File Path": "./test-code/test-set-three.cpp",
+        "Line Number": "6",
+        "Source Code": [
+            "}"
+        ]
+    }
+]
