@@ -189,7 +189,8 @@ int main(void){
         std::stringstream buffer;
         buffer << file.rdbuf();
         std::string fileContent = buffer.str();
-
+        // Close the file
+        file.close();
         // Check if the file contains "No errors found!"
         if (fileContent.find("No errors or warnings - compiled successfully") != std::string::npos) {
             std::cout << "No errors found!" << std::endl;
@@ -199,15 +200,27 @@ int main(void){
             //continue the while loop if errors are found
             std::cout << "Errors were found or the specific message is not present." << std::endl;
         }
-
-        // Close the file
-        file.close();
         i++; //increment i to exit the while loop after 10 iterations so that github actions doesn't run forever
 
-    }
+    } 
     //This function can be uncommented to easily reload the errors in the ./test-code directory from the files in the ./test-code-backup directory. 
     //The ./fixed-test-code directory also exists if you would like to test fixed code with no errors by pasting that code into the ./test-code directory. 
     //reloadErrors(); //this function repopulates the ./test-code directory with the backup error files from the ./test-code=backups directory
+
+
+    //check if fixed code runs -- //TODO - this is currently broken, fix it later 
+
+    // std::string cdToFixedCode = "cd test-code"; //cd ./final-autonomous-code-assistant-agent-MaxDLink/test-code
+
+
+    // std::string compileFixedCode = "clang++ main.cpp test-set-one.cpp test-set-two.cpp test-set-three.cpp -o fixedCode";
+
+    // std::string runFixed = "./fixedCode"; 
+
+    // std::cout << "\n\n\n\nRUNNING THE FIXED CODE TO DOUBLE CHECK THAT IT WORKS!\n\n\n\n";
+    // system(cdToFixedCode.c_str()); //cd to the test-code directory to get ready to run fixed code 
+    // system(compileFixedCode.c_str()); //compile fixed code
+    // system(runFixed.c_str()); //run the fixed code to verify it works!
 
     return 0; 
 
